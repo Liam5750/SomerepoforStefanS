@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 21.10.22 18:47
+Description: Unexpected error
+
+java.lang.ClassCastException: net.minecraft.client.entity.EntityPlayerSP cannot be cast to net.minecraft.entity.item.EntityItem
+	at ravenNPlus.client.module.modules.render.ItemESP.s(ItemESP.java:44)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_23_ItemESP_s_RenderWorldLastEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.dispatchRenderLast(ForgeHooksClient.java:124)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1460)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1283)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1111)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1107)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:380)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at ravenNPlus.client.module.modules.render.ItemESP.s(ItemESP.java:44)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_23_ItemESP_s_RenderWorldLastEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.client.ForgeHooksClient.dispatchRenderLast(ForgeHooksClient.java:124)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1460)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1283)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player434'/416, l='MpServer', x=223,93, y=69,00, z=280,01]]
+	Chunk stats: MultiplayerChunkCache: 30, 30
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 236,00,64,00,256,00 - World: (236,64,256), Chunk: (at 12,4,0 in 14,16; contains blocks 224,0,256 to 239,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 381847 game time, 36644 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 38 total; [EntityPig['Pig'/256, l='MpServer', x=249,81, y=86,00, z=304,19], EntityItem['item.item.carrots'/3713, l='MpServer', x=223,13, y=67,00, z=279,19], EntitySkeleton['Skeleton'/1475, l='MpServer', x=214,44, y=35,00, z=311,91], EntityZombie['Zombie'/196, l='MpServer', x=198,47, y=20,00, z=260,09], EntityZombie['Zombie'/3972, l='MpServer', x=203,50, y=50,00, z=283,50], EntityBat['Bat'/197, l='MpServer', x=194,75, y=60,10, z=271,25], EntitySquid['Squid'/2565, l='MpServer', x=178,81, y=62,56, z=286,34], EntitySkeleton['Skeleton'/198, l='MpServer', x=196,28, y=60,00, z=268,13], EntityPig['Pig'/199, l='MpServer', x=197,44, y=65,00, z=256,69], EntityBat['Bat'/200, l='MpServer', x=197,47, y=54,10, z=285,75], EntityPig['Pig'/264, l='MpServer', x=270,81, y=69,00, z=246,75], EntityBat['Bat'/2056, l='MpServer', x=174,80, y=32,07, z=311,34], EntitySkeleton['Skeleton'/201, l='MpServer', x=195,28, y=56,00, z=285,78], EntityPig['Pig'/265, l='MpServer', x=259,13, y=72,00, z=241,81], EntityPig['Pig'/202, l='MpServer', x=220,25, y=75,00, z=288,03], EntitySkeleton['Skeleton'/3786, l='MpServer', x=181,50, y=20,00, z=279,50], EntityPig['Pig'/205, l='MpServer', x=190,06, y=70,00, z=307,94], EntityZombie['Zombie'/3737, l='MpServer', x=223,50, y=67,00, z=279,50], EntityBat['Bat'/3035, l='MpServer', x=184,08, y=20,84, z=274,15], EntityRabbit['Rabbit'/223, l='MpServer', x=210,59, y=71,00, z=242,28], EntitySkeleton['Skeleton'/1951, l='MpServer', x=184,50, y=31,00, z=311,50], EntityRabbit['Rabbit'/224, l='MpServer', x=216,69, y=68,00, z=251,50], EntityPlayerSP['Player434'/416, l='MpServer', x=223,93, y=69,00, z=280,01], EntityZombie['Zombie'/225, l='MpServer', x=211,47, y=47,00, z=288,03], EntityItem['item.item.rottenFlesh'/2787, l='MpServer', x=228,13, y=69,00, z=279,38], EntityZombie['Zombie'/1190, l='MpServer', x=257,50, y=25,00, z=269,50], EntityPig['Pig'/169, l='MpServer', x=184,13, y=67,00, z=255,06], EntityPig['Pig'/172, l='MpServer', x=187,94, y=69,00, z=271,97], EntityBat['Bat'/2736, l='MpServer', x=214,31, y=17,80, z=243,41], EntityItem['item.item.rottenFlesh'/2864, l='MpServer', x=227,63, y=69,00, z=281,72], EntityCreeper['Creeper'/3696, l='MpServer', x=222,50, y=17,00, z=249,50], EntityZombie['Zombie'/180, l='MpServer', x=185,00, y=49,71, z=302,69], EntityBat['Bat'/2612, l='MpServer', x=249,73, y=25,96, z=285,75], EntityPig['Pig'/181, l='MpServer', x=180,69, y=69,00, z=311,44], EntityPig['Pig'/247, l='MpServer', x=232,41, y=79,00, z=315,22], EntityCreeper['Creeper'/1981, l='MpServer', x=198,50, y=44,00, z=265,50], EntityCreeper['Creeper'/2110, l='MpServer', x=176,50, y=28,00, z=306,50], EntitySkeleton['Skeleton'/255, l='MpServer', x=247,66, y=78,00, z=285,22]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:383)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2645)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:409)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_202, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 377861568 bytes (360 MB) / 1462763520 bytes (1395 MB) up to 3329753088 bytes (3175 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 94
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	ravenNPlus{SLK3} [Raven N+] ([1.8.9] Raven- N+.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.0 Compatibility Profile Context 22.8.2.220819' Renderer: 'AMD Radeon(TM) Vega 3 Graphics'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Vega 3 Graphics GL version 4.6.0 Compatibility Profile Context 22.8.2.220819, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x AMD Athlon 3000G with Radeon Vega Graphics 

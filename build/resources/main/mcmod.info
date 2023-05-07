@@ -1,0 +1,24 @@
+[
+   {
+    "modid": "ravenNPlus",
+    "name": "Raven N+",
+    "description": "
+------------------------------------------
+
+ A Modification of Raven B+ (A KeyStroke Mod) Made by SleepyFish.
+
+ Authors from RavenNPlus : 
+  Kopamed, JMDRaichDev, RaidLocked, liluub
+
+ Credits :
+  L4J & WMS (Utils), Joel(nothing he is just cool), Kv (Sumo codes)",
+    "version": "b1.3",
+    "url": "https://discord.gg/KzBu6USXAc",
+    "updateUrl": "https://www.youtube.com/ofpmedia",
+    "authorList": ["SleepyFish"],
+    "credits": "",
+    "logoFile": "/a/player.png",
+    "screenshots": [],
+    "dependencies": []
+   }
+]

@@ -1,0 +1,140 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 24.09.22 22:50
+Description: Ticking entity
+
+java.lang.NoClassDefFoundError: com/sun/javafx/geom/Vec3d
+	at ravenNPlus.client.module.modules.render.Projectiles.onUpdateWalkingPlayer(Projectiles.java:36)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_19_Projectiles_onUpdateWalkingPlayer_Event.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPostTick(FMLCommonHandler.java:357)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:402)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:163)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2011)
+	at net.minecraft.world.World.updateEntity(World.java:1976)
+	at net.minecraft.world.World.updateEntities(World.java:1805)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2176)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1080)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:380)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+Caused by: java.lang.ClassNotFoundException: com.sun.javafx.geom.Vec3d
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 26 more
+Caused by: java.lang.NullPointerException
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 28 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at ravenNPlus.client.module.modules.render.Projectiles.onUpdateWalkingPlayer(Projectiles.java:36)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_19_Projectiles_onUpdateWalkingPlayer_Event.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onPlayerPostTick(FMLCommonHandler.java:357)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:402)
+	at net.minecraft.client.entity.EntityPlayerSP.onUpdate(EntityPlayerSP.java:163)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2011)
+	at net.minecraft.world.World.updateEntity(World.java:1976)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityPlayerSP)
+	Entity ID: 358
+	Entity Name: Player17
+	Entity's Exact location: 246,74, 63,00, 150,89
+	Entity's Block location: 246,00,63,00,150,00 - World: (246,63,150), Chunk: (at 6,3,6 in 15,9; contains blocks 240,0,144 to 255,255,159), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0,02, -0,08, 0,07
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1805)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player17'/358, l='MpServer', x=246,74, y=63,00, z=150,89]]
+	Chunk stats: MultiplayerChunkCache: 25, 25
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 236,00,64,00,256,00 - World: (236,64,256), Chunk: (at 12,4,0 in 14,16; contains blocks 224,0,256 to 239,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 203797 game time, 136644 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 22 total; [EntityCreeper['Creeper'/225, l='MpServer', x=257,50, y=12,00, z=174,50], EntityPlayerSP['Player17'/358, l='MpServer', x=246,74, y=63,00, z=150,89], EntitySkeleton['Skeleton'/226, l='MpServer', x=258,78, y=37,00, z=169,09], EntityZombie['Zombie'/227, l='MpServer', x=256,09, y=41,00, z=161,50], EntitySheep['Sheep'/228, l='MpServer', x=266,00, y=64,00, z=170,00], EntityPig['Pig'/229, l='MpServer', x=261,13, y=64,00, z=164,78], EntitySheep['Sheep'/204, l='MpServer', x=226,53, y=63,00, z=120,19], EntitySheep['Sheep'/205, l='MpServer', x=228,16, y=65,00, z=125,47], EntityPig['Pig'/241, l='MpServer', x=282,13, y=64,00, z=154,06], EntityPig['Pig'/242, l='MpServer', x=281,03, y=68,00, z=147,97], EntitySkeleton['Skeleton'/243, l='MpServer', x=279,50, y=64,00, z=165,50], EntitySpider['Spider'/244, l='MpServer', x=274,50, y=70,00, z=181,50], EntityZombie['Zombie'/212, l='MpServer', x=246,50, y=22,00, z=115,50], EntityArrow['Arrow'/213, l='MpServer', x=250,06, y=62,00, z=141,13], EntityItem['item.item.porkchopRaw'/214, l='MpServer', x=241,88, y=63,00, z=151,97], EntityXPOrb['Experience Orb'/215, l='MpServer', x=241,72, y=63,00, z=150,28], EntityBat['Bat'/216, l='MpServer', x=247,28, y=36,10, z=172,28], EntityPig['Pig'/217, l='MpServer', x=242,88, y=61,00, z=160,84], EntityZombie['Zombie'/186, l='MpServer', x=212,50, y=15,00, z=140,50], EntitySkeleton['Skeleton'/187, l='MpServer', x=213,84, y=63,00, z=159,75], EntityPig['Pig'/188, l='MpServer', x=217,97, y=64,00, z=159,03], EntityPig['Pig'/189, l='MpServer', x=220,09, y=68,00, z=184,91]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:383)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2645)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:401)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_202, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 995059280 bytes (948 MB) / 1476395008 bytes (1408 MB) up to 3329753088 bytes (3175 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	ravenNPlus{SLK3} [Raven N+] ([1.8.9] Raven- N+.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.0 Compatibility Profile Context 22.8.2.220819' Renderer: 'AMD Radeon(TM) Vega 3 Graphics'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Vega 3 Graphics GL version 4.6.0 Compatibility Profile Context 22.8.2.220819, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x AMD Athlon 3000G with Radeon Vega Graphics 

@@ -1,0 +1,12 @@
+hypixel-api~ 
+paste-api~ 
+clickgui-pos~ combat~250~50~true/movement~50~50~true/player~250~50~true/render~450~57~true/minigame~350~50~true/other~350~50~true/client~150~50~true/hotkey~650~50~fals
+targethud-pos~ 286~40
+killaura-pos~ 494~28
+loaded-cfg~ default
+HUDX~ 5
+HUDY~ 70
+terminal-pos~ 5,165
+terminal-size~ 138,103
+terminal-opened~ false
+terminal-hidden~ false

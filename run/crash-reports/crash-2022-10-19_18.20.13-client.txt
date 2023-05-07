@@ -1,0 +1,116 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 19.10.22 18:20
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at ravenNPlus.client.module.modules.combat.NewAntiBot.isCostumBot(NewAntiBot.java:108)
+	at ravenNPlus.client.module.modules.combat.NewAntiBot.isBot(NewAntiBot.java:51)
+	at ravenNPlus.client.utils.RenderUtils.drawStringHUD(RenderUtils.java:369)
+	at ravenNPlus.client.module.modules.combat.KillAura.drawHud(KillAura.java:232)
+	at ravenNPlus.client.module.modules.combat.KillAura.p(KillAura.java:227)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_17_KillAura_p_RenderTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onRenderTickStart(FMLCommonHandler.java:342)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1105)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:380)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at ravenNPlus.client.module.modules.combat.NewAntiBot.isCostumBot(NewAntiBot.java:108)
+	at ravenNPlus.client.module.modules.combat.NewAntiBot.isBot(NewAntiBot.java:51)
+	at ravenNPlus.client.utils.RenderUtils.drawStringHUD(RenderUtils.java:369)
+	at ravenNPlus.client.module.modules.combat.KillAura.drawHud(KillAura.java:232)
+	at ravenNPlus.client.module.modules.combat.KillAura.p(KillAura.java:227)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_17_KillAura_p_RenderTickEvent.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:49)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player577'/300, l='MpServer', x=134,01, y=68,00, z=285,93]]
+	Chunk stats: MultiplayerChunkCache: 25, 25
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 183,00,64,00,231,00 - World: (183,64,231), Chunk: (at 7,4,7 in 11,14; contains blocks 176,0,224 to 191,255,239), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 143063 game time, 143063 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 27 total; [EntityItem['item.item.egg'/328, l='MpServer', x=173,09, y=62,00, z=285,78], EntityBat['Bat'/138, l='MpServer', x=132,94, y=40,00, z=257,72], EntityZombie['Zombie'/139, l='MpServer', x=127,53, y=66,00, z=249,03], EntitySpider['Spider'/140, l='MpServer', x=123,00, y=54,09, z=279,69], EntitySpider['Spider'/141, l='MpServer', x=118,09, y=68,00, z=300,28], EntityBat['Bat'/142, l='MpServer', x=116,59, y=14,09, z=317,25], EntityCreeper['Creeper'/149, l='MpServer', x=138,50, y=63,00, z=240,50], EntitySkeleton['Skeleton'/150, l='MpServer', x=139,50, y=63,00, z=242,91], EntityCreeper['Creeper'/151, l='MpServer', x=128,44, y=38,00, z=262,38], EntityBat['Bat'/152, l='MpServer', x=138,78, y=41,10, z=258,25], EntitySkeleton['Skeleton'/153, l='MpServer', x=133,47, y=14,00, z=280,09], EntityPig['Pig'/154, l='MpServer', x=135,03, y=66,00, z=284,97], EntityZombie['Zombie'/162, l='MpServer', x=153,34, y=63,00, z=257,34], EntitySpider['Spider'/163, l='MpServer', x=158,53, y=64,00, z=262,91], EntityZombie['Zombie'/164, l='MpServer', x=147,00, y=46,00, z=284,84], EntityItem['item.tile.leaves.spruce'/166, l='MpServer', x=148,78, y=39,00, z=297,75], EntityPlayerSP['Player577'/300, l='MpServer', x=134,01, y=68,00, z=285,93], EntitySheep['Sheep'/174, l='MpServer', x=160,91, y=63,00, z=243,88], EntitySkeleton['Skeleton'/175, l='MpServer', x=158,53, y=63,00, z=241,91], EntityBat['Bat'/176, l='MpServer', x=154,69, y=37,31, z=277,25], EntityChicken['Chicken'/177, l='MpServer', x=173,00, y=62,66, z=284,63], EntityChicken['Chicken'/178, l='MpServer', x=173,19, y=62,63, z=287,69], EntityZombie['Zombie'/179, l='MpServer', x=166,19, y=62,00, z=281,78], EntityItem['item.item.egg'/180, l='MpServer', x=173,13, y=62,00, z=287,81], EntityCreeper['Creeper'/181, l='MpServer', x=165,63, y=64,00, z=297,47], EntityBat['Bat'/182, l='MpServer', x=169,44, y=34,09, z=309,25], EntityCreeper['Creeper'/127, l='MpServer', x=100,50, y=45,00, z=257,50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:383)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2645)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:409)
+	at net.minecraft.client.main.Main.main(Main.java:116)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_202, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1177735640 bytes (1123 MB) / 1447034880 bytes (1380 MB) up to 3329753088 bytes (3175 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.19 Powered by Forge 11.15.1.2318 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	Forge{11.15.1.2318} [Minecraft Forge] (forgeSrc-1.8.9-11.15.1.2318-1.8.9.jar) 
+	UCHIJAAAA	ravenNPlus{SLK3} [Raven N+] ([1.8.9] Raven- N+.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.0 Compatibility Profile Context 22.8.2.220819' Renderer: 'AMD Radeon(TM) Vega 3 Graphics'
+	Launched Version: 1.8.9
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Vega 3 Graphics GL version 4.6.0 Compatibility Profile Context 22.8.2.220819, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x AMD Athlon 3000G with Radeon Vega Graphics 
